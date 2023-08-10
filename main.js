@@ -1,9 +1,14 @@
 const innerText = document.querySelector('#latin-text');
 const outerText = document.querySelector('.latin-result>pre>code');
+const copyButton= document.querySelector('button');
 
 
-document.querySelector('button').onclick = function (){
+copyButton.onclick = function (){
     navigator.clipboard.writeText(outerText.innerText);
+    copyButton.innerText='COPIED!';
+    setTimeout(function (){
+        copyButton.innerText='COPY';
+    }, 3000)
 }
 
 innerText.oninput = function () {

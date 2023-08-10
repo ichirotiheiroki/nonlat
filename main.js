@@ -3,7 +3,7 @@ const outerText = document.querySelector('.latin-result>pre>code');
 
 
 document.querySelector('button').onclick = function (){
-    navigator.clipboard.writeText(outerText.innerHTML);
+    navigator.clipboard.writeText(outerText.innerText);
 }
 
 innerText.oninput = function () {

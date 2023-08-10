@@ -2,7 +2,11 @@ const innerText = document.querySelector('#latin-text');
 const outerText = document.querySelector('.latin-result>pre>code');
 
 
-document.querySelector('button').onclick = function () {
+document.querySelector('button').onclick = function (){
+    navigator.clipboard.writeText(outerText.innerHTML);
+}
+
+innerText.oninput = function () {
     let text = innerText.value.trim();
     if (text !== '') {
         let result;

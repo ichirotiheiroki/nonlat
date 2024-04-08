@@ -21,6 +21,4 @@ innerText.oninput = function () {
         result = result.replace(regExp, symbol => `<mark>${symbol}</mark>`);
         outerText.innerHTML = result;
     }
-
-
 }

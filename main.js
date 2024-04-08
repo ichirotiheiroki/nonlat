@@ -1,13 +1,13 @@
 const innerText = document.querySelector('#latin-text');
 const outerText = document.querySelector('.latin-result>pre>code');
-const copyButton= document.querySelector('button');
+const copyButton = document.querySelector('button');
 
 
-copyButton.onclick = function (){
+copyButton.onclick = function () {
     navigator.clipboard.writeText(outerText.innerText);
-    copyButton.innerText='COPIED!';
-    setTimeout(function (){
-        copyButton.innerText='COPY';
+    copyButton.innerText = 'COPIED!';
+    setTimeout(function () {
+        copyButton.innerText = 'COPY';
     }, 3000)
 }
 
@@ -21,6 +21,6 @@ innerText.oninput = function () {
         result = result.replace(regExp, symbol => `<mark>${symbol}</mark>`);
         outerText.innerHTML = result;
     }
-
-
 }
+
+
